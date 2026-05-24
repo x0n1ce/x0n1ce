@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yasir.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <span class="nav-logo">Yasir<span class="accent">.</span>dev</span>
+    <ul class="nav-links">
+      <li><a href="#apps" data-i18n="nav_apps">تطبيقاتي</a></li>
+      <li><a href="#about" data-i18n="nav_about">عني</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">تواصل</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="nav-menu" id="menuBtn" aria-label="القائمة">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#apps" data-i18n="nav_apps" onclick="closeMobile()">تطبيقاتي</a>
+    <a href="#about" data-i18n="nav_about" onclick="closeMobile()">عني</a>
+    <a href="#contact" data-i18n="nav_contact" onclick="closeMobile()">تواصل</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-tag" data-i18n="hero_tag">مرحباً بك 👋</span>
+      <h1 class="hero-title" data-i18n="hero_title">تطبيقاتي<br /><span class="hero-sub" data-i18n="hero_sub">ومشاريعي البرمجية</span></h1>
+      <p class="hero-desc" data-i18n="hero_desc">مجموعة من التطبيقات والأدوات التي طورتها بشغف. استكشف وجرّب!</p>
+      <a href="#apps" class="hero-btn">
+        <i class="ti ti-apps"></i>
+        <span data-i18n="hero_btn">استعرض التطبيقات</span>
+      </a>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- APPS SECTION -->
+  <section class="section" id="apps">
+    <div class="container">
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title" data-i18n="apps_title">التطبيقات</h2>
+          <p class="section-subtitle" data-i18n="apps_subtitle">كل ما طورته حتى الآن</p>
+        </div>
+        <span class="section-count" id="countLabel">٢ مشروع</span>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="filter-row" id="filterRow">
+        <button class="filter-btn active" data-cat="all"    data-i18n="filter_all">الكل</button>
+        <button class="filter-btn"        data-cat="mobile" data-i18n="filter_mobile">موبايل</button>
+        <!-- <button class="filter-btn"        data-cat="web"    data-i18n="filter_web">ويب</button>
+        <button class="filter-btn"        data-cat="tool"   data-i18n="filter_tool">أدوات</button>
+        <button class="filter-btn"        data-cat="game"   data-i18n="filter_game">ألعاب</button> -->
+      </div>
+
+      <!-- APPS GRID -->
+      <div class="apps-grid" id="appsGrid">
+
+        <!-- BalotPro -->
+        <div class="app-card" data-cat="mobile">
+          <div class="card-thumb thumb-blue">
+            <!-- أيقونة التطبيق: استبدل src بمسار صورتك مثلاً: images/balotpro.png -->
+            <img class="app-icon" src="images/balotpro.png" alt="BalotPro icon"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="thumb-emoji" style="display:none;">🃏</span>
+            <div class="card-badge" data-i18n="badge_live">متاح الآن</div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="card-name" data-i18n="balot_name">حاسبة بلوت برو</h3>
+              <span class="card-tag tag-mobile" data-i18n="filter_mobile">موبايل</span>
+            </div>
+            <p class="card-desc" data-i18n="balot_desc">تطبيقك الأمثل لإدارة وتسجيل مباريات البلوت باحترافية. واجهات عصرية تدعم الوضع الداكن وتحليلات دقيقة.</p>
+            <div class="card-footer">
+              <a class="btn-primary" href="https://balotpro.com" target="_blank" rel="noopener">
+                <i class="ti ti-external-link"></i>
+                <span data-i18n="btn_more">اعرف أكثر</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- يومي -->
+        <div class="app-card wip" data-cat="tool">
+          <div class="card-thumb thumb-purple">
+            <!-- أيقونة التطبيق: استبدل src بمسار صورتك مثلاً: images/yawmi.png -->
+            <img class="app-icon" src="images/yawmi.png" alt="يومي icon"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="thumb-emoji" style="display:none;">📅</span>
+            <div class="card-badge badge-wip" data-i18n="badge_wip">قيد التطوير</div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="card-name" data-i18n="yawmi_name">يومي</h3>
+              <span class="card-tag tag-mobile" data-i18n="filter_mobile">أداة</span>
+            </div>
+            <p class="card-desc" data-i18n="yawmi_desc">تطبيق لتنظيم يومك وإدارة مهامك. قريباً!</p>
+            <div class="card-footer">
+              <button class="btn-primary btn-disabled" disabled>
+                <i class="ti ti-clock"></i>
+                <span data-i18n="btn_soon">قريباً...</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-avatar">👨‍💻</div>
+        <div class="about-text">
+          <h2 data-i18n="about_title">عني</h2>
+          <p data-i18n="about_desc">مطور شغوف في تطوير التطبيقات والويب وكل ما يخطر على بالك. أحب بناء أشياء تفرق وتترك أثر.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact_title">تواصل معي</h2>
+      <p class="section-subtitle" data-i18n="contact_subtitle">لديك سؤال أو اقتراح؟ أنا هنا!</p>
+      <div class="contact-links">
+        <a href="mailto:soon" class="contact-item">
+          <i class="ti ti-mail"></i>
+          <span>soon</span>
+        </a>
+        <!-- <a href="" target="_blank" class="contact-item">
+          <i class="ti ti-brand-github"></i>
+          <span>GitHub</span>
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p data-i18n="footer_text">© 2025 — جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
